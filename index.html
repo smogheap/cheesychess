@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Cheesy Chess</title>
+<style>
+body {
+  font-family: mono;
+}
+img[src$=".gif"], img[src$=".png"] {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+table {
+  border-collapse: collapse;
+}
+#chess td.black {
+  background: #444;
+}
+#chess td.white {
+  background: #ccc;
+}
+#chess td.select {
+  background: #4c4;
+}
+#chess td.red {
+  background: #c44;
+}
+#moves {
+  height: 8em;
+  overflow: auto;
+  color: #888;
+  border: 1px solid grey;
+}
+</style>
+<script src="src/chess.js"></script>
+</head>
+<body>
+
+<table id="chess"></table>
+
+promote to:<select id="promote">
+<option value="q">queen</option>
+<option value="r">rook</option>
+<option value="b">bishop</option>
+<option value="n">knight</option>
+</select>
+
+<div id="status"></div>
+
+<div id="moves"></div>
+
+</body>
+</html>

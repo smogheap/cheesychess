@@ -1,0 +1,38 @@
+Cheesy Chess
+============
+
+I (penduin) have decided that I want to learn chess.  I suck at thinking ahead
+and want to build up those brain-muscles.  To teach is to learn twice, so I'm
+re-inventing (poorly) the ubiquitous wheel that is computer chess.  For me,
+it's a learning exercise.  For others, who knows.
+
+One hurdle I faced was that I was so useless in the beginning that even the
+most lousy engines I could find would still usually beat me.  Once I got to
+the point where I could beat PreChess reliably, I became annoyed that it will
+castle out of check, so I decided to build my own bumb opponent.  :^)
+
+
+Working Features
+----------------
+- human play
+- play validation (all moves except castling, en passant)
+- check detection
+
+
+Planned Features
+----------------
+- checkmate detection
+- castling, en passant
+- proper log notation
++ cpu play
+  - super-stupid "shmoe" algorithm: play moves at random
+  - less-stupid "cheese" algorithm: play well enough to defeat PreChess :^)
+  - still-less-stupid "ork" algorithm: play well enough to defeat me :^S
+
+
+Additional Ideas
+----------------
+
+I would like to experiment with new variations of chess.  One which I suspect
+might be fun would let the king be captured like any other piece, at which
+point a surviving piece of the player's choice would become king.
