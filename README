@@ -1,15 +1,15 @@
 Cheesy Chess
 ============
 
-I (penduin) have decided that I want to learn chess.  I suck at thinking ahead
-and want to build up those brain-muscles.  To teach is to learn twice, so I'm
+I (penduin) decided that I want to learn chess.  I suck at thinking ahead and
+want to build up those brain-muscles.  To teach is to learn twice, so I'm
 re-inventing (poorly) the ubiquitous wheel that is computer chess.  For me,
 it's a learning exercise.  For others, who knows.
 
 One hurdle I faced was that I was so useless in the beginning that even the
 most lousy engines I could find would still usually beat me.  Once I got to
 the point where I could beat PreChess reliably, I became annoyed that it will
-castle out of check, so I decided to build my own bumb opponent.  :^)
+castle out of check, so I decided to build my own dumb opponent.  :^)
 
 
 Working Features
