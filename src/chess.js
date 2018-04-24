@@ -646,21 +646,39 @@ function move_piece(target) {
 		console.log("attack claimed");
 		return;
 	}
+
 	CHESS.board = next;
-
-	// TODO: output sane notation
-	var text = CHESS.selected.title + " to " + target.parentNode.className;
-	CHESS.el_moves.appendChild(document.createTextNode(text));
-	CHESS.el_moves.appendChild(document.createElement("br"));
-
-	CHESS.selected.parentNode.classList.remove("select");
-	CHESS.selected = null;
-	move_status("");
 	CHESS.whitemove = !CHESS.whitemove;
 	if(CHESS.whitemove) {
 		++CHESS.turn;
 	}
 	render_board();
+
+	// TODO: output sane notation
+	//var text = CHESS.selected.title + " to " + target.parentNode.className;
+	var scrape = function(str) {
+		["black", "white", "select"].every(function(rem) {
+			return str = str.replace(rem, "");
+		});
+		return str.trim();
+	};
+	var text = [
+		scrape(CHESS.selected.parentNode.className),
+		" ",
+		scrape(CHESS.selected.title),
+		" to ",
+		scrape(target.parentNode.className)
+	].join("");
+	if(is_attacked2(CHESS.board, find_king2(CHESS.board), CHESS.whitemove, CHESS.history)) {
+		text += " check";
+	}
+	CHESS.el_moves.appendChild(document.createTextNode(text));
+	CHESS.el_moves.appendChild(document.createElement("br"));
+	CHESS.el_moves.scrollTop = CHESS.el_moves.scrollHeight;
+
+	CHESS.selected.parentNode.classList.remove("select");
+	CHESS.selected = null;
+	move_status("");
 }
 
 function move_status(text) {

@@ -15,7 +15,7 @@ castle out of check, so I decided to build my own dumb opponent.  :^)
 Working Features
 ----------------
 - human play
-- play validation (all moves except castling, en passant)
+- move validation (all moves except castling, en passant)
 - check detection
 
 
@@ -36,3 +36,6 @@ Additional Ideas
 I would like to experiment with new variations of chess.  One which I suspect
 might be fun would let the king be captured like any other piece, at which
 point a surviving piece of the player's choice would become king.
+
+It could also be interesting to allow capturing one's own pieces, or to let
+pawns retreat.
